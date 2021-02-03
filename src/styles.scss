@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~font-awesome/css/font-awesome.css';
+
+body {  height: 100%; margin: 0; padding: 10%; }
+.navbar-dark .navbar-brand {
+    color: #19ce83;
+}
+.list-group-item.active {
+    z-index: 2;
+    background-color: #19ce83;
+    border-color: #19ce83;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color:  #0bbb54;
+    border-color:  #19ce64;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #19ce83;
+    border-color:#19ce83;
+}
+.dropdown-item {
+    cursor: pointer;
+}

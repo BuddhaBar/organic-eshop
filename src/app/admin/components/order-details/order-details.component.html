@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-6" *ngIf="order">
+        <p class="font-weight-bold">Order placed on {{ order.datePlaced | date: mediumDate}}</p>
+        <ul class="list-group list-group-flush" *ngFor="let item of order.items">
+            <li  class="list-group-item">
+                {{ item.quantity }} x {{ item.product.title }}
+                <div class="float-right">
+                    {{ item.totalPrice | currency:'USD':true}}
+                </div>
+            </li>
+        </ul>
+        <div class="list-group-item font-weight-bold">
+            Total order price
+            <div class="float-right">
+                {{ order.orderPrice | currency:'USD':true }}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6" *ngIf="order">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item font-weight-bold">
+                Shipping information
+            </li>
+            <li  class="list-group-item font-weight-bold">
+                Name :
+                <div class="float-right font-italic font-weight-normal">
+                    {{ order.shipping.name }}
+                </div>
+            </li>
+            <li  class="list-group-item font-weight-bold">
+                Address1 :
+                <div class="float-right font-italic font-weight-normal">
+                    {{ order.shipping.addressLine1 }}
+                </div>
+            </li>
+            <li  class="list-group-item font-weight-bold">
+                Address2 :
+                <div class="float-right font-italic font-weight-normal">
+                    {{ order.shipping.addressLine2 }}
+                </div>
+            </li>
+            <li  class="list-group-item font-weight-bold">
+                City :
+                <div class="float-right font-italic font-weight-normal">
+                    {{ order.shipping.city }}
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
