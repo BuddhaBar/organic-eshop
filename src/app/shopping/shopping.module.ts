@@ -36,7 +36,7 @@ import { AuthGuard } from 'shared/services/auth-guard.service';
       },
       {
         path: 'shopping-cart', 
-        component: ShoppingCartComponent
+        component: ShoppingCartComponent,
       },
       {
         path: 'check-out', 
