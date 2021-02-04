@@ -20,24 +20,20 @@
       </ul>
     </div>  
       <ul class="navbar-nav menu">
-        <ng-template #anonymousUser>
-         <li class="nav-item active">
-           <a class="nav-link" routerLink="/login">Login <span class="sr-only">(current)</span></a>
-         </li>
-        </ng-template>
-        <li *ngIf="appUser; else anonymousUser" ngbDropdown class="nav-item dropdown show">
+        
+        <li  ngbDropdown class="nav-item dropdown show">
            <a  
            ngbDropdownToggle 
            class="nav-link dropdown-toggle" 
            id="dropdown01" 
            data-toggle="dropdown" 
-           aria-haspopup="true" aria-expanded="false">{{ appUser.name }}</a>
+           aria-haspopup="true" aria-expanded="false">Menu</a>
            <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
              <a ngbDropdownItem class="dropdown-item" routerLink="/my-orders">My Orders</a>
-             <ng-container *ngIf="appUser.isAdmin">
+             
                <a ngbDropdownItem class="dropdown-item" routerLink="/admin/products">Manage Products</a>
                <a ngbDropdownItem class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
-             </ng-container>
+             
              <a ngbDropdownItem class="dropdown-item" (click)="logout()">Log Out</a>
            </div>
         </li>

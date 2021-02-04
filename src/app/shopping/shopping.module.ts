@@ -33,7 +33,6 @@ import { AuthGuard } from 'shared/services/auth-guard.service';
       {
         path: 'products', 
         component: ProductsComponent,
-        canActivate: [AuthGuard]
       },
       {
         path: 'shopping-cart', 
@@ -42,17 +41,14 @@ import { AuthGuard } from 'shared/services/auth-guard.service';
       {
         path: 'check-out', 
         component: CheckOutComponent,
-        canActivate: [AuthGuard]
       },
       {
         path: 'order-success/:id', 
         component: OrderSuccessComponent,
-        canActivate: [AuthGuard]
       },
       {
         path: 'my-orders', 
         component: MyOrdersComponent,
-        canActivate: [AuthGuard]
       },
     ])
   ]

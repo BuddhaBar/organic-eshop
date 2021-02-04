@@ -31,27 +31,22 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
       {
         path: 'admin/products/new', 
         component: ProductFormComponent,
-        canActivate: [AuthGuard, AdminAuthGuard]
       },
       {
         path: 'admin/products/:id', 
         component: EditFormComponent,
-        canActivate: [AuthGuard, AdminAuthGuard]
       },
       {
         path: 'admin/products', 
         component: AdminProductsComponent,
-        canActivate: [AuthGuard, AdminAuthGuard]
       },
       {
         path: 'admin/orders', 
         component: AdminOrdersComponent,
-        canActivate: [AuthGuard, AdminAuthGuard]
       },
       {
         path: 'order-details/:id', 
         component: OrderDetailsComponent,
-        canActivate: [AuthGuard, AdminAuthGuard]
       }
     ]),
     BrowserAnimationsModule,
